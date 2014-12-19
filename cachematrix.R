@@ -8,9 +8,10 @@
 ##    2) Contains functions that allow us to:
 ##       2a) Retrieve the values of the 2 stored objects
 ##       2b) Set the values of the 2 stored objects
-##       Given lexical scoping rule, these functions must be
-##       defined within the container.
-##       Otherwise, they will not be able to access the stored objects.
+##       Given R's lexical scoping rule, these functions must be defined
+##       within the container.
+##       Otherwise, they will not be able to access the stored objects
+##       inside the container.
 ## II. Create a function that allows conditional initialization 
 ##     of one of the stored objects (i.e., the inverse of the matrix)
 ##     If the stored matrix has changed since the last time the inverse
@@ -67,8 +68,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ##   If an inverse is stored (inverse is not null), returns the stored inverse
 ##   and the function ends
 ##   If an inverse is not stored (inverse is null), does the following:
-##      Calls getMatrix to retrieve stored matrix
-##      Calculates the matrix using solve()
+##      Calls getMatrix to retrieve stored matrix from container
+##      Calculates the inverse of the stored matrix using solve()
 ##      Calls setInverse to store the calculated inverse in the container
 ##      Returns the inverse
 

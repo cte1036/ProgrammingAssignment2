@@ -71,8 +71,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ##      Calculates the matrix using solve()
 ##      Calls setInverse to store the calculated inverse in the container
 ##      Returns the inverse
-##
-## See sample_session_progassign2.txt for a sample session
+
 
 cacheSolve <- function(q, ...) {
         i <- q$getInverse()
